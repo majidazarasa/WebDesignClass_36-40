@@ -1,0 +1,53 @@
+@import "../sass/vars";
+@import "../sass/mixins";
+
+* {
+    font-family: $font-family;
+    color: $font-color;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+}
+.container {
+    @include border(1px solid rgba(0, 0, 0, .3));
+    height: 800px;
+}
+.banner{
+    @include border(1px solid rgba(0, 0, 0, .4));
+    height: 200px;
+    background-color: $main-Color;
+}
+.container>.row{
+    height: 300px;
+}
+.container .row .col-md-4{
+    border: 1px solid $font-color;
+    background-color: $main-Color;
+    height: auto;
+}
+.container .row .col-md-4 p{
+    $main-Color: red;
+    color: $main-Color;
+}
+nav{
+    background-color: $nav-color;
+    ul{
+        text-align: center;
+        @include padding(20px, 20px);
+        li{
+            display: inline-block;
+            &:hover{
+                background-color: $menu-item; 
+            }
+            a{
+                font-size: 20px;
+                text-decoration: none;
+                padding: 5px;
+                &:hover{
+                    color: darkgray;
+                }
+            }
+         }
+    }
+}

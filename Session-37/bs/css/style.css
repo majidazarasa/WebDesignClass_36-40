@@ -1,0 +1,52 @@
+* {
+  font-family: "vazir";
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right; }
+
+.container {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-border: 1px solid rgba(0, 0, 0, 0.3);
+  -moz-border: 1px solid rgba(0, 0, 0, 0.3);
+  -ms-border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 800px; }
+
+.banner {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-border: 1px solid rgba(0, 0, 0, 0.4);
+  -moz-border: 1px solid rgba(0, 0, 0, 0.4);
+  -ms-border: 1px solid rgba(0, 0, 0, 0.4);
+  height: 200px;
+  background-color: #f3f3f3; }
+
+.container > .row {
+  height: 300px; }
+
+.container .row .col-md-4 {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #f3f3f3;
+  height: auto; }
+
+.container .row .col-md-4 p {
+  color: red; }
+
+nav {
+  background-color: #4af2a3; }
+  nav ul {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li:hover {
+        background-color: rgba(0, 0, 0, 0.3); }
+      nav ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        padding: 5px; }
+        nav ul li a:hover {
+          color: darkgray; }
+
+/*# sourceMappingURL=style.css.map */
