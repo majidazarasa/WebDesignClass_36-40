@@ -1,0 +1,33 @@
+@for $i from 5px through 7px{
+    .item-1{
+        width: $i;
+    }
+}
+
+$i : 0;
+@while $i < 100 {
+    $i : $i+20;
+    .item-#{$i}{
+        border: 1px solid rgb(252, 248, 248);
+    }
+}
+
+@each $s in (normal, bold, italic) {
+    .#{$s}{
+        font-weight: $s;
+    }
+}
+
+@each $s in (static, flex, block, inline-block, grid, none) {
+    .display-#{$s}{
+        display: $s;
+    }
+}
+
+@each $name, $style, $size in ((normal, bold, 10px), (emphasis, bold, 15px)) {
+    .#{$name}{
+        font-weight: $style;
+        font-size: $size;
+    }
+}
+

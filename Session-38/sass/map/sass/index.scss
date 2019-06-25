@@ -1,0 +1,12 @@
+$color-map:(light: #e57373, medium: #f2f2f2, dark: #333);
+$size-map:(xsmall: 300, medium: 500, large: 1000);
+
+p{
+    color: map-get($color-map, light);
+    width: map-get($size-map, xsmall);
+}
+
+div{
+    color: map-get($color-map, dark);
+    width: map-get($size-map, large);
+}
