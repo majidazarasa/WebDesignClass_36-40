@@ -1,0 +1,28 @@
+* {
+  direction: rtl;
+  font-family: 'vazir'; }
+
+.jumbotron {
+  background: #fff; }
+
+.jumbotron p:last-child {
+  margin-bottom: 0; }
+
+.jumbotron-heading {
+  font-weight: 300; }
+
+.jumbotron .container {
+  max-width: 40rem; }
+
+.box-shadow {
+  box-shadow: 0.25rem 0.5rem 0.75rem rgba(0, 0, 0, 0.25); }
+
+.box-shadow:hover {
+  box-shadow: 0.25rem 0.5rem 0.75rem rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem; } }
+
+/*# sourceMappingURL=index.css.map */
