@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            padding-top: 40px;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: [col1-start] 150px [col2-start] 150px [col3-start] 150px [col3-end];
+            grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row3-end];
+            grid-gap: 10px;
+        }
+        .grid-item{
+            background: #333;
+            color: white;
+            font-size: 2rem;
+            padding: 40px;
+            text-align: center;
+        }
+        .item-a{
+            grid-column: col1-start/col3-end;
+        }
+        .item-b{
+            grid-row: row2-start/row3-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item-a">A</div>
+        <div class="grid-item item-b">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+    </div>
+</body>
+</html>

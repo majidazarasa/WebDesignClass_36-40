@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            
+            display: grid;
+            grid-template-areas:
+                'projects projects companies  companies '
+                'sms      helpDesk helpDesk   email     '
+                'telGuid  telGuid  calculator calculator';
+                grid-gap: 10px;
+        }
+        .projects, .companies, .sms, .helpDesk, .email, .telGuid, .calculator{
+            color: white;
+            height: 100px;
+            align-items: center;
+
+        }
+        .projects{
+            grid-area: projects;
+            background: red;
+            text-align: center;
+        } 
+        .companies{
+            grid-area: companies;
+            background: lightgreen;
+            text-align: center;
+        }
+        .sms{
+            grid-area: sms;
+            background: lightgreen;
+            text-align: center;
+        }   
+        .helpDesk{
+            grid-area: helpDesk;
+            background: lightblue;
+            text-align: center;
+        }
+        .email{
+            grid-area: email;
+            background: brown;
+            text-align: center;
+        }
+        .telGuid{
+            grid-area: telGuid;
+            background: lightgreen;
+            text-align: center;
+        }  
+        .calculator{
+            grid-area: calculator;
+            background: magenta;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="projects">پروژه های من</div>
+        <div class="companies">شرکتهای من</div>
+        <div class="sms">SMS</div>
+        <div class="helpDesk">Help Desk</div>
+        <div class="email">Email</div>
+        <div class="telGuid">راهنمای تلفن</div>
+        <div class="calculator">ماشین حساب</div>
+    </div>
+</body>
+
+</html>
