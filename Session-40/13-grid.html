@@ -9,74 +9,113 @@
     <style>
         * {
             box-sizing: border-box;
+            justify-content: center;
             margin: 0;
-            padding: 0;
+            padding: 50px 0;
         }
 
         .grid-container {
-            
             display: grid;
+            grid-template-columns: repeat(4, 10%);
             grid-template-areas:
                 'projects projects companies  companies '
                 'sms      helpDesk helpDesk   email     '
-                'telGuid  telGuid  calculator calculator';
-                grid-gap: 10px;
+                'telGuide telGuide calculator calculator';
+            grid-gap: 10px;
         }
-        .projects, .companies, .sms, .helpDesk, .email, .telGuid, .calculator{
+
+        @media(max-width:500px) {
+            .grid-container {
+                grid-template-areas:
+                    'projects  '
+                    'companies '
+                    'sms       '
+                    'helpDesk  '
+                    'email     '
+                    'telGuide  '
+                    'calculator';
+            }
+        }
+
+        @media(max-width:900px) {
+            .grid-container {
+                grid-template-areas:
+                    'projects   projects  '
+                    'companies  companies '
+                    'sms        sms       '
+                    'helpDesk   helpDesk  '
+                    'email      email     '
+                    'telGuide   telGuide  '
+                    'calculator calculator';
+            }
+        }
+
+        .box {
+            background: #333;
+            color: white;
+            font-size: 1.3vw;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .projects,
+        .companies,
+        .sms,
+        .helpDesk,
+        .email,
+        .telGuide,
+        .calculator {
             color: white;
             height: 100px;
             align-items: center;
-
         }
-        .projects{
+
+        .projects {
             grid-area: projects;
             background: red;
-            text-align: center;
-        } 
-        .companies{
-            grid-area: companies;
-            background: lightgreen;
-            text-align: center;
         }
-        .sms{
+
+        .companies {
+            grid-area: companies;
+            background: green;
+        }
+
+        .sms {
             grid-area: sms;
-            background: lightgreen;
-            text-align: center;
-        }   
-        .helpDesk{
+            background: darkgreen;
+        }
+
+        .helpDesk {
             grid-area: helpDesk;
             background: lightblue;
-            text-align: center;
         }
-        .email{
+
+        .email {
             grid-area: email;
             background: brown;
-            text-align: center;
         }
-        .telGuid{
-            grid-area: telGuid;
+
+        .telGuide {
+            grid-area: telGuide;
             background: lightgreen;
-            text-align: center;
-        }  
-        .calculator{
+        }
+
+        .calculator {
             grid-area: calculator;
             background: magenta;
-            text-align: center;
         }
-
-
     </style>
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="projects">پروژه های من</div>
-        <div class="companies">شرکتهای من</div>
-        <div class="sms">SMS</div>
-        <div class="helpDesk">Help Desk</div>
-        <div class="email">Email</div>
-        <div class="telGuid">راهنمای تلفن</div>
-        <div class="calculator">ماشین حساب</div>
+        <div class="box projects">پروژه های من</div>
+        <div class="box companies">شرکتهای من</div>
+        <div class="box sms">SMS</div>
+        <div class="box helpDesk">Help Desk</div>
+        <div class="box email">Email</div>
+        <div class="box telGuide">راهنمای تلفن</div>
+        <div class="box calculator">ماشین حساب</div>
     </div>
 </body>
 
